@@ -1,0 +1,55 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: fe15ab11021f0e050afaf4a7b4c46c1028fe617d8b67ae4d015998bae053020a
+
+name:           proyectito
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/proyectito#readme>
+homepage:       https://github.com/githubuser/proyectito#readme
+bug-reports:    https://github.com/githubuser/proyectito/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2019 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/proyectito
+
+library
+  exposed-modules:
+      Clase3
+      Spec
+  hs-source-dirs:
+      src
+  default-extensions: NoImplicitPrelude FlexibleContexts RebindableSyntax
+  build-depends:
+      base >=4.7 && <5
+    , hspec
+    , pdeprelude
+  default-language: Haskell2010
+
+test-suite proyectito-test
+  type: exitcode-stdio-1.0
+  main-is: CorrerTests.hs
+  other-modules:
+      Paths_proyectito
+  hs-source-dirs:
+      test
+  default-extensions: NoImplicitPrelude FlexibleContexts RebindableSyntax
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , hspec
+    , pdeprelude
+    , proyectito
+  default-language: Haskell2010
